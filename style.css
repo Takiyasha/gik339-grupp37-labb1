@@ -1,0 +1,108 @@
+/* Lägg till grundläggande reset för att undvika inkonsekvenser mellan webbläsare */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(15, 15, 15, 0.945); /* Bakgrundsfärgen */
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px; /* Ger rundade hörn */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lägger till en lätt skugga för djup */
+  max-width: 400px; /* Maxbredd på formuläret */
+  margin: 0 auto; /* Centrerar formuläret */
+}
+
+label {
+  display: block; /* Gör att varje label tar upp hela bredden */
+  margin-top: 10px;
+  color: #666;
+}
+
+input[type="text"] {
+  width: 100%; /* Gör att textfältet fyller tillgänglig bredd */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd; /* Ger en lätt grå kant */
+  border-radius: 4px;
+}
+
+.checkbox {
+  margin-top: 5px;
+}
+
+.btn {
+  display: block; /* Gör knappen blocknivå så den tar upp hela bredden */
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #5c6bc0; /* Knappens bakgrundsfärg */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* Visar en pekare för att indikera klickbarhet */
+}
+
+.btn:hover {
+  background-color: #3f51b5; /* Mörkare blå färg vid hover */
+}
+
+.content-container {
+  background-color: #eaeaea;
+  padding: 10px 20px; /* 10px top and bottom padding, 20px left and right */
+  margin-top: 20px;
+  border-radius: 4px;
+  text-align: center; /* This will center the text horizontally */
+  overflow: hidden; /* This will prevent content from spilling outside the border radius */
+  word-wrap: break-word; /* This ensures the text wraps and doesn't overflow horizontally */
+}
+
+/* Du kan lägga till responsivitet med media queries */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 10px;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 40px 5px #ff0000;
+  }
+  33% {
+    box-shadow: 0 0 40px 5px #00ff00;
+  }
+  66% {
+    box-shadow: 0 0 40px 5px #0000ff;
+  }
+  100% {
+    box-shadow: 0 0 40px 5px #ff0000;
+  }
+}
+
+form {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  transition: background-image 2s; /* Smooth transition for gradient change */
+  transition: box-shadow 1.25s ease-in-out;
+}
